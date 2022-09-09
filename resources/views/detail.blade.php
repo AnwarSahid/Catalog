@@ -14,12 +14,11 @@
 <body class="bg-gray-300">
 
     <div class="w-full h-full">
-        <div
-            class="w-full bg-black h-96 object-center bg-cover bg-center   rounded-b-2xl bg-[url({{ asset('perpus3.png') }})] ">
+        <div class="w-full bg-black h-screen object-center bg-cover bg-center bg-[url({{ asset('perpus3.png') }})] ">
             {{-- <img src="{{ asset('perpus3.jpg') }}"
                 class="object-center object-cover opacity-50 brightness-50 h-full w-full rounded-b-2xl"> --}}
             <div class="flex">
-                <div class="w-full p-3 mx-20 h-20 flex justify-between ">
+                <div class="w-full p-3 md:mx-20 h-20 flex justify-between ">
                     <img src="{{ asset('opac.png') }}" class="h-auto ">
                     {{-- <div class="flex text-white items-center text-4xl font-sans font-semibold   ">Opac
                     <span>Unila</span> --}}
@@ -38,19 +37,78 @@
                 </div>
             </div>
 
-            <div class="flex mt-20 items-center justify-center text-white text-5xl font-sans font-bold">
-                Opac Unila
-            </div>
-            <div class="flex items-center mt-2 justify-center text-white text-xl font-sans font-bold">
-                Layanan Online Public Access Catalog Universitas Lampung
+
+
+            <div class="w-full mt-20 ">
+                <div class="card md:mx-80 bg-white w-auto h-auto shadow-lg rounded-lg">
+                    <div class="p-10">
+                        <div class="flex items-center justify-center text-gray-900 text-xl font-sans font-bold">
+
+                            Detail Buku
+                        </div>
+                        <div class="flex w-full mt-10 justify-center items-center">
+                            <table class="table-auto ">
+
+                                <tbody class="">
+                                    <tr>
+                                        <td class=" rounded-lg border  px-4 py-2">Judul Buku</td>
+                                        <td class="border px-4 py-2">{{ $detail->TitKey }}</td>
+
+                                    </tr>
+                                    @foreach ($detail->blibs as $name)
+                                        <tr>
+                                            <td class="border px-4 py-2">Nomer Panggil</td>
+                                            <td class="border px-4 py-2">{{ $name->CalKey }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border px-4 py-2">Pustaka</td>
+                                            <td class="border px-4 py-2">{{ $name->PubRaw }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border px-4 py-2">Edisi</td>
+                                            <td class="border px-4 py-2">{{ $name->EdiRaw }}</td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="border px-4 py-2">Author</td>
+                                            <td class="border px-4 py-2">
+                                                @foreach ($name->auts as $author)
+                                                    {{ $author->AutKey }}.
+                                                @endforeach
+                                            </td>
+                                        </tr>
+                                    @endforeach
+
+                                    <tr>
+                                        <td class="border px-4 py-2">Ketersediaan</td>
+                                        <td class="border px-4 py-2"><span
+                                                class="hover:bg-green-600 text-white text-xs font-semibold bg-green-700 px-2 py-1 rounded-full">
+                                                Tersedia
+                                            </span> <span
+                                                class="hover:bg-violet-600 text-white text-xs font-semibold bg-violet-700 px-2 py-1 rounded-full">
+                                                Tidak Tersedia
+                                            </span></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                    <p class="bg-gradient-to-r h-2 rounded-b-lg from-green-300 via-blue-500 to-purple-600"></p>
+                </div>
+
             </div>
         </div>
-    </div>
+
+
     </div>
 
 
-    {{-- <livewire:cek /> --}}
-    {{ $user->name }}
+
 
     @livewireScripts
 </body>
