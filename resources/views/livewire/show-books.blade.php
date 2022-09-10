@@ -39,20 +39,16 @@
                                 <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                                     Judul:
                                 </h2>
-                                <h1 class="title-font text-lg capitalize font-medium text-gray-600 mb-3">
+                                <h1 class="title-font  text-lg capitalize font-medium text-gray-600 mb-3">
                                     {{ $book->TitKey }}</h1>
 
 
 
                                 @foreach ($book->blibs as $no)
-                                    <div> <span> No.Panggil : {{ $no->CalKey }}</span></div>
-
-
-
-
-
-                                    @foreach ($no->auts as $aut)
-                                        <table>
+                                    <div class="font-semibold text-xs"> <span> No.Panggil : {{ $no->CalKey }}</span>
+                                    </div>
+                                    <table class="mt-2">
+                                        @foreach ($no->auts as $aut)
                                             <tbody class="align-top font-sans">
                                                 <td>
                                                     Author
@@ -65,8 +61,8 @@
                                                     </div>
                                                 </td>
                                             </tbody>
-                                        </table>
-                                    @endforeach
+                                        @endforeach
+                                    </table>
                                 @endforeach
                                 <div class="flex flex-row mt-3 flex-wrap gap-2">
                                     <p
