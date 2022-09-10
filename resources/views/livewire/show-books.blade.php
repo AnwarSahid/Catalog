@@ -32,23 +32,40 @@
             <div class="flex flex-wrap mt-2 -m-4">
                 @foreach ($books as $book)
                     <div class="p-4 xl:lg:w-1/5  md:lg:w-1/3 sm:lg:w-1/2">
-                        <div
-                            class="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
+                        <div class="h-full rounded-xl shadow-cla-blue bg-white overflow-hidden">
                             <img class="lg:h-36 md:h-36 w-full object-cover object-top scale-110 transition-all duration-400 hover:scale-100"
                                 src="{{ asset('books.png') }}" alt="blog">
                             <div class="p-6">
                                 <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                                    {{ $book->SubId }}
+                                    Judul:
                                 </h2>
                                 <h1 class="title-font text-lg capitalize font-medium text-gray-600 mb-3">
                                     {{ $book->TitKey }}</h1>
-                                {{-- <div> <span> {{ $book->CalRow }}</span></div> --}}
+
+
+
                                 @foreach ($book->blibs as $no)
-                                    <div> <span> Nomer Panggil : {{ $no->CalKey }}</span></div>
+                                    <div> <span> No.Panggil : {{ $no->CalKey }}</span></div>
+
+
+
+
 
                                     @foreach ($no->auts as $aut)
-                                        <div> <span class="capitalize">Nama Author : {{ $aut->AutKey }} </span>
-                                        </div>
+                                        <table>
+                                            <tbody class="align-top font-sans">
+                                                <td>
+                                                    Author
+                                                </td>
+                                                <td>
+                                                    :
+                                                </td>
+                                                <td>
+                                                    <div> <span class="capitalize"> {{ $aut->AutKey }} </span>
+                                                    </div>
+                                                </td>
+                                            </tbody>
+                                        </table>
                                     @endforeach
                                 @endforeach
                                 <div class="flex flex-row mt-3 flex-wrap gap-2">

@@ -52,7 +52,7 @@
                                 <tbody class="">
                                     <tr>
                                         <td class=" rounded-lg border  px-4 py-2">Judul Buku</td>
-                                        <td class="border px-4 py-2">{{ $detail->TitKey }}</td>
+                                        <td class="capitalize border px-4 py-2">{{ $detail->TitKey }}</td>
 
                                     </tr>
                                     @foreach ($detail->blibs as $name)
@@ -72,7 +72,7 @@
 
                                         <tr>
                                             <td class="border px-4 py-2">Author</td>
-                                            <td class="border px-4 py-2">
+                                            <td class="capitalize border px-4 py-2">
                                                 @foreach ($name->auts as $author)
                                                     {{ $author->AutKey }}.
                                                 @endforeach

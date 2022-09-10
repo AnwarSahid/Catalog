@@ -29,10 +29,10 @@ class ShowBooks extends Component
 
         if ($this->search !== null) {
             $query->when($this->search !== null, function ($q) {
-                $q->where('TitKey', 'like', '%' . $this->search . '%')
+                $q->where('TitKey',  'like', '%' . strtolower($this->search) . '%')
                     ->orWhereHas('blibs', function ($qBlibs) {
-                        $qBlibs->where('CalKey', 'like', '%' . $this->search . '%')->orWhereHas('auts', function ($qAuts) {
-                            $qAuts->where('AutKey', 'like', '%' . $this->search . '%');
+                        $qBlibs->where('CalKey', 'like', '%' . strtolower($this->search) . '%')->orWhereHas('auts', function ($qAuts) {
+                            $qAuts->where('AutKey', 'like', '%' . strtolower($this->search) . '%');
                         });
                     });
             });
