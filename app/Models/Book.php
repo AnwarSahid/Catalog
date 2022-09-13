@@ -15,4 +15,13 @@ class Book extends Model
     {
         return $this->belongsToMany(EAut::class, 'EAutBib', 'ABBibId', 'ABAutId', 'BibId', 'AutId');
     }
+
+    public function citems()
+    {
+        return $this->hasMany(CItem::class,  'ItemBib', 'BibId');
+    }
+    public function eidn()
+    {
+        return $this->hasOne(EIdn::class,  'IdnBibId', 'BibId');
+    }
 }

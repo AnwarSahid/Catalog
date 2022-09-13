@@ -51,6 +51,7 @@ class BookController extends Controller
         $detail = ETit::with('blibs')->where('TitId', $book)->first();
         // $d = $detail->blibs;
         // return $detail;
+        // $detail = ETit::with('blibs')->where('TitId', $book)->first();
 
         return view('detail', compact('detail'));
     }

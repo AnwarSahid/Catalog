@@ -6,10 +6,15 @@
 
     <div class="flex mx-10">
 
-        <input wire:model="search"
+        <input wire:model.lazy="search"
             class="shadow appearance-none  title-font text-lg font-serif border rounded-full w-full h-16 mt-10 py-2 px-3 xl:mx-64 text-gray-900 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Cari Buku : Judul/Author">
 
+    </div>
+    <div class=" flex items-center justify-center mt-10">
+        <div wire:loading class="text-lg ">
+            Loading...
+        </div>
     </div>
 
     <section class="text-gray-600 body-font">
@@ -34,7 +39,7 @@
                     <div class="p-4 xl:lg:w-1/5  md:lg:w-1/3 sm:lg:w-1/2">
                         <div class="h-full rounded-xl shadow-cla-blue bg-white overflow-hidden">
                             <img class="lg:h-36 md:h-36 w-full object-cover object-top scale-110 transition-all duration-400 hover:scale-100"
-                                src="{{ asset('books.png') }}" alt="blog">
+                                src="{{ asset('buku.jfif') }}" alt="blog">
                             <div class="p-6">
                                 <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                                     Judul:
@@ -64,7 +69,7 @@
                                         @endforeach
                                     </table>
                                 @endforeach
-                                <div class="flex flex-row mt-3 flex-wrap gap-2">
+                                {{-- <div class="flex flex-row mt-3 flex-wrap gap-2">
                                     <p
                                         class="hover:bg-green-600 text-gray-300 text-xs font-semibold bg-green-700 px-2 py-1 rounded-full">
                                         Tersedia
@@ -74,7 +79,7 @@
                                         Tidak Tersedia
                                     </p>
 
-                                </div>
+                                </div> --}}
                                 <div class="flex items-center mt-2 flex-wrap ">
 
                                     <a href="{{ route('detail', ['book' => $book->TitId]) }}"
