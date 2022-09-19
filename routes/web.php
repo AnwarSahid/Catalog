@@ -25,6 +25,10 @@ Route::get('/', function () {
     dump('Database connected: ' . \DB::connection()->getDatabaseName());
     return view('welcome');
 });
+Route::get('/versi/php', function () {
+
+    return view('phpinfo');
+});
 
 
 Route::get('/detail/{book}', [BookController::class, 'show'])->name('detail');
