@@ -19,10 +19,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // DB::connection()->getPdo();
+    DB::connection()->getPdo();
     // try {
     // DB::connection()->getPdo();
-    // dump('Database connected: ' . \DB::connection()->getDatabaseName());
+    dump('Database connected: ' . \DB::connection()->getDatabaseName());
     return view('welcome');
 });
 
