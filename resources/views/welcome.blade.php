@@ -14,8 +14,7 @@
 <body class="bg-gray-300">
 
     <div class="w-full h-full">
-        <div
-            class="w-full bg-black h-96 object-center bg-cover bg-center   rounded-b-2xl bg-[url({{ asset('perpus3.png') }})] ">
+        <div class="w-full bg-black h-96 object-center bg-cover bg-center rounded-b-2xl bg-perpus">
             {{-- <img src="{{ asset('perpus3.jpg') }}"
                 class="object-center object-cover opacity-50 brightness-50 h-full w-full rounded-b-2xl"> --}}
             <div class="flex">

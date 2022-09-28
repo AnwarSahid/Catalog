@@ -6,7 +6,11 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                'perpus': "url('/perpus3.png')"
+            }
+        },
     },
     plugins: [],
 }
