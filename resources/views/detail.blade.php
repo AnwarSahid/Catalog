@@ -13,15 +13,13 @@
 
 <body class="bg-white">
 
-    <div class="bg-repeat" style="background-image: url({{ asset('perpus3.png') }})"></div>
 
 
 
 
     <div class="w-full h-full">
 
-        <div
-            class="w-full bg-black h-screen object-center bg-cover bg-center bg-[url({{ asset('perpus3.png') }})] bg-repeat">
+        <div class="w-full bg-black h-screen object-center bg-cover bg-center bg-perpus bg-repeat">
             {{-- <img src="{{ asset('perpus3.jpg') }}"
                 class="object-center object-cover opacity-50 brightness-50 h-full w-full rounded-b-2xl"> --}}
             <div class="flex">
