@@ -30,11 +30,11 @@
                             {{-- <li class="mr-6">
                                 <a class="text-gray-100 hover:bg-violet-600 font-sans font-semibold px-4 py-1 rounded-full hover:text-white"
                                     href="https://library.unila.ac.id/web/">Perpustakaan</a>
-                            </li>
-                            <li class="mr-6">
-                                <a class="text-gray-100 hover:bg-violet-600 font-sans font-semibold px-4 py-1 rounded-full hover:text-white"
-                                    href="http://digilib.unila.ac.id ">Digilib</a>
                             </li> --}}
+                            <li class="mr-6">
+                                <a class=" text-gray-100  bg-violet-600 font-sans font-semibold px-4 py-1 rounded-full hover:text-white"
+                                    href="/">Back To Home</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
