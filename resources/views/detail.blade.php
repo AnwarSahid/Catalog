@@ -12,11 +12,6 @@
 </head>
 
 <body class="bg-white">
-
-
-
-
-
     <div class="w-full h-full">
 
         <div class="w-full bg-black h-screen object-center bg-cover bg-center bg-perpus bg-repeat">
@@ -32,14 +27,14 @@
                     <span>Unila</span> --}}
                     <div class="flex items-center">
                         <ul class="flex items-center">
-                            <li class="mr-6">
+                            {{-- <li class="mr-6">
                                 <a class="text-gray-100 hover:bg-violet-600 font-sans font-semibold px-4 py-1 rounded-full hover:text-white"
                                     href="https://library.unila.ac.id/web/">Perpustakaan</a>
                             </li>
                             <li class="mr-6">
                                 <a class="text-gray-100 hover:bg-violet-600 font-sans font-semibold px-4 py-1 rounded-full hover:text-white"
                                     href="http://digilib.unila.ac.id ">Digilib</a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>

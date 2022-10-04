@@ -24,14 +24,14 @@
                     <span>Unila</span> --}}
                     <div class="flex invisible sm:visible items-center">
                         <ul class="flex items-center">
-                            <li class="mr-6">
+                            {{-- <li class="mr-6">
                                 <a class="text-gray-100 hover:bg-violet-600 font-sans font-semibold md:px-4 py-1 rounded-full hover:text-white"
                                     href="https://library.unila.ac.id/web/">Perpustakaan</a>
                             </li>
                             <li class="md:mr-6">
                                 <a class="text-gray-100 hover:bg-violet-600 font-sans font-semibold md:px-4 py-1 rounded-full hover:text-white"
                                     href="http://digilib.unila.ac.id ">Digilib</a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
