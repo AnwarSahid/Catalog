@@ -92,7 +92,7 @@
                 @endforeach
             </div>
             <div class="mt-5">
-                {{ $search !== null ? $books->links() : null }}
+                {{ $search !== null ? $books->links('components.paginator') : null }}
             </div>
         </div>
     </section>
